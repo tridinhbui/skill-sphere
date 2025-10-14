@@ -37,7 +37,7 @@ export default function Team() {
 
         <div className="bg-gray-50 rounded-2xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Key Challenges We're Addressing
+            Key Challenges We&apos;re Addressing
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow">

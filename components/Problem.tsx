@@ -21,7 +21,7 @@ export default function Problem() {
     {
       title: "Lack of Real-World Guidance",
       description:
-        "Employment needs and career preparation strategies aren't discussed enough in education.",
+        "Employment needs and career preparation strategies aren&apos;t discussed enough in education.",
       icon: "💼",
     },
   ];
@@ -57,7 +57,7 @@ export default function Problem() {
         </div>
 
         <div className="bg-primary-600 text-white p-8 rounded-2xl shadow-xl">
-          <h3 className="text-2xl font-bold mb-4">Who We're Helping</h3>
+          <h3 className="text-2xl font-bold mb-4">Who We&apos;re Helping</h3>
           <p className="text-lg leading-relaxed">
             High school students, undergraduates, college graduates, and
             post-grads who are looking to strengthen their resumes and increase

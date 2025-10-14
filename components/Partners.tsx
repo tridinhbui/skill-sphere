@@ -110,7 +110,7 @@ export default function Partners() {
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Interested in partnering with SkillSphere or contributing to our
-            mission? We'd love to hear from you.
+            mission? We&apos;d love to hear from you.
           </p>
           <button className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all hover:scale-105 shadow-lg">
             Get in Touch
