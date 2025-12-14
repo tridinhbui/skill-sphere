@@ -5,6 +5,7 @@ import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import Resources from "@/components/Resources";
 import CareerQuiz from "@/components/CareerQuiz";
+import CircularModel from "@/components/CircularModel";
 import Impact from "@/components/Impact";
 import Team from "@/components/Team";
 import Partners from "@/components/Partners";
@@ -22,6 +23,7 @@ export default function Home() {
       <HowItWorks />
       <Resources />
       <CareerQuiz />
+      <CircularModel />
       <Impact />
       <Team />
       <Partners />

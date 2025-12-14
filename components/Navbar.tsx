@@ -55,6 +55,12 @@ export default function Navbar() {
                 Quiz
               </a>
               <a
+                href="#circular-model"
+                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
+              >
+                Circular Model
+              </a>
+              <a
                 href="#team"
                 className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
               >
