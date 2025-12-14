@@ -43,10 +43,10 @@ export default function Navbar() {
                 Solution
               </a>
               <a
-                href="#impact"
+                href="#resources"
                 className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
               >
-                Impact
+                Resources
               </a>
               <a
                 href="#team"
@@ -55,7 +55,13 @@ export default function Navbar() {
                 Team
               </a>
               <a
-                href="#partners"
+                href="#contact"
+                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
+              >
+                Contact
+              </a>
+              <a
+                href="#resources"
                 className="bg-primary-600 text-white hover:bg-primary-700 transition-colors px-6 py-2 rounded-full text-sm font-medium"
               >
                 Get Started

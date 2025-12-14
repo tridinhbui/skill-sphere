@@ -2,9 +2,13 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
+import HowItWorks from "@/components/HowItWorks";
+import Resources from "@/components/Resources";
 import Impact from "@/components/Impact";
 import Team from "@/components/Team";
 import Partners from "@/components/Partners";
+import Contact from "@/components/Contact";
+import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,9 +18,13 @@ export default function Home() {
       <Hero />
       <Problem />
       <Solution />
+      <HowItWorks />
+      <Resources />
       <Impact />
       <Team />
       <Partners />
+      <Contact />
+      <Chatbot />
       <Footer />
     </main>
   );
