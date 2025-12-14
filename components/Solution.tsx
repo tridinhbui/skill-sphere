@@ -1,40 +1,46 @@
 export default function Solution() {
-  const features = [
+  const solutions = [
     {
       title: "Free Career Resources",
       description:
-        "Resume templates, interview prep guides, and skill-building resources accessible to everyone.",
+        "Accessible and free career resources are extremely important in the current world. SkillSphere provides tools like resume templates, interview tips, and skill-building guides to help students, especially those from underrepresented backgrounds. These resources, along with AI-based skill assessments, help students stay confident and competitive in the job market.",
       icon: "📚",
+      highlight: "AI-based skill assessments included",
     },
     {
       title: "Internship Directory",
       description:
-        "Curated opportunities and entry-level positions to help you gain real-world experience.",
+        "SkillSphere partners with companies, NGOs, and startups that care about sustainability such as those focused on renewable energy, eco-friendly production, and recycling. This helps connect students with meaningful internship opportunities that support both career growth and environmental responsibility.",
       icon: "🌟",
+      highlight: "Sustainability-focused opportunities",
     },
     {
       title: "Mentorship Networks",
       description:
-        "Connect with experienced professionals who can guide your career journey.",
+        "Mentorship in SkillSphere is based on sharing knowledge and giving back. Experienced professionals guide students, and later, those students mentor others which creates a continuous cycle of learning and growth. This approach helps build a stronger and more connected professional community.",
       icon: "🤝",
+      highlight: "Circular learning model",
     },
     {
       title: "Career Field Insights",
       description:
-        "Learn about different industries and career paths from experts in the field.",
+        "SkillSphere also helps students explore industries that focus on sustainability, green technology, and ethical business. By promoting awareness of these fields, the platform encourages students to pursue careers that balance success with social and environmental responsibility.",
       icon: "🔍",
+      highlight: "Sustainability & green tech focus",
     },
     {
       title: "AI as a Support Tool",
       description:
-        "Learn to leverage AI technology to enhance your skills rather than compete with it.",
+        "Instead of replacing human workers, AI in SkillSphere is used to support learning and development. It provides personalized feedback and adapts to each student's progress, making skill-building more efficient and accessible. This reflects circular economy values — focusing on improvement, reuse, and long-term growth.",
       icon: "💡",
+      highlight: "Personalized AI feedback",
     },
     {
       title: "Global Accessibility",
       description:
-        "Access resources from anywhere in the world, breaking down geographic barriers.",
+        "SkillSphere removes geographic barriers by making career resources available worldwide. This helps students from all backgrounds participate in the global economy, share knowledge, and collaborate across borders.",
       icon: "🌍",
+      highlight: "Worldwide access, no barriers",
     },
   ];
 
@@ -52,17 +58,22 @@ export default function Solution() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {solutions.map((solution, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl border-2 border-primary-100 hover:border-primary-300 transition-all hover:-translate-y-1"
+              className="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl border-2 border-primary-100 hover:border-primary-300 transition-all hover:-translate-y-1 flex flex-col"
             >
-              <div className="text-5xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {feature.title}
+              <div className="text-5xl mb-4">{solution.icon}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                {solution.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
+              <div className="mb-3">
+                <span className="inline-block bg-primary-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                  {solution.highlight}
+                </span>
+              </div>
+              <p className="text-gray-700 leading-relaxed flex-grow">
+                {solution.description}
               </p>
             </div>
           ))}

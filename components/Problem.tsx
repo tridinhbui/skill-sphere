@@ -1,28 +1,32 @@
 export default function Problem() {
-  const triggers = [
+  const problems = [
     {
       title: "Lack of Job Opportunities",
       description:
-        "Students and graduates face limited entry-level positions in today's competitive market.",
+        "Finding a job after graduation has become really difficult. There's a lot of competition for the few entry-level positions that are available. Because of economic uncertainty and rapid technological change, many companies have reduced hiring for beginner roles. As a result, students often face a &quot;bottleneck&quot; when starting their careers. Compared to ten years ago, fewer organizations offer paid internships or training opportunities, which leaves many students relying on unpaid work or missing out on valuable experience altogether.",
       icon: "🎯",
+      stats: "Joblessness surges for youngest US workers as firms slow entry-level hiring",
     },
     {
       title: "AI Domination",
       description:
-        "Entry-level jobs are increasingly being replaced by AI, making it harder to break into careers.",
+        "Artificial intelligence is changing the job market in a big way. According to reports from the World Economic Forum and other major organizations, millions of jobs, especially entry-level ones, could be replaced by AI. Many of the simple, repetitive tasks that new employees usually do are now handled by machines. Therefore, this makes it harder for young people to gain experience in traditional jobs. At the same time, AI also creates new kinds of opportunities, but they require strong digital skills and the ability to adapt quickly.",
       icon: "🤖",
+      stats: "AI can already replace nearly 12% of jobs, with entry-level positions most at risk",
     },
     {
       title: "Unequal Distribution",
       description:
-        "Gender disparities persist across various career paths, limiting opportunities for many.",
+        "Gender inequality in the workplace is still a major issue. Even though more women are earning higher degrees and working in professional fields, men are still more common in leadership roles and better-paying industries. On average, women earn about 84–85% of what men earn. Moreover, there are big differences when it comes to promotions. Only 22% of women reported getting promoted compared to 34% of men in 2024. This shows that there's still a long way to go before equality is fully achieved.",
       icon: "⚖️",
+      stats: "Women earn 84-85% of what men earn; only 22% of women get promoted vs 34% of men",
     },
     {
       title: "Lack of Real-World Guidance",
       description:
-        "Employment needs and career preparation strategies aren&apos;t discussed enough in education.",
+        "Many schools and universities don't properly prepare students for the real world of work. Career preparation is often limited, and students don't always learn practical things like how to write resumes, perform well in interviews, or network effectively. Because of this, many graduates enter the job market unsure of what employers are looking for especially in fast-changing industries shaped by AI.",
       icon: "💼",
+      stats: "College graduates struggle to find jobs as AI reshapes entry-level requirements",
     },
   ];
 
@@ -40,17 +44,24 @@ export default function Problem() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {triggers.map((trigger, index) => (
+          {problems.map((problem, index) => (
             <div
               key={index}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
             >
-              <div className="text-5xl mb-4">{trigger.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                {trigger.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {trigger.description}
+              <div className="flex items-start gap-4 mb-4">
+                <div className="text-5xl flex-shrink-0">{problem.icon}</div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {problem.title}
+                  </h3>
+                  <p className="text-sm text-primary-600 font-semibold mb-3">
+                    {problem.stats}
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                {problem.description}
               </p>
             </div>
           ))}
@@ -66,27 +77,102 @@ export default function Problem() {
           </p>
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500">
-            Sources:{" "}
+        <div className="mt-12 bg-gray-100 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            References
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <a
-              href="https://www.weforum.org/stories/2025/04/ai-jobs-international-workers-day/"
+              href="https://www.spglobal.com/market-intelligence/en/news-insights/articles/2025/5/joblessness-surges-for-youngest-us-workers-as-firms-slow-entrylevel-hiring-89225818"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-600 hover:underline"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
             >
-              World Economic Forum
+              <span className="mr-2">•</span>
+              <span>S&P Global: Joblessness surges for youngest US workers</span>
             </a>
-            {" · "}
             <a
-              href="https://www.cnbc.com/2025/09/07/ai-entry-level-jobs-hiring-careers.html"
+              href="https://www.shrm.org/topics-tools/news/talent-acquisition/youth-employment-falls-summer-2025"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-600 hover:underline"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
             >
-              CNBC
+              <span className="mr-2">•</span>
+              <span>SHRM: Youth employment falls summer 2025</span>
             </a>
-          </p>
+            <a
+              href="https://www.cnbc.com/2025/11/23/college-graduates-are-struggling-to-find-jobs-ai-is-partly-to-blame.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>CNBC: College graduates struggling to find jobs</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/posts/paolomaresca_why-ai-is-replacing-some-jobs-faster-than-activity-7371079798615339010-flIE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>LinkedIn: Why AI is replacing some jobs faster</span>
+            </a>
+            <a
+              href="https://www.forbes.com/sites/hessiejones/2025/11/24/ai-is-not-killing-entry-level-jobs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>Forbes: AI is not killing entry-level jobs</span>
+            </a>
+            <a
+              href="https://www.cnbc.com/2025/11/20/why-ai-may-kill-career-advancement-for-many-young-workers.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>CNBC: Why AI may kill career advancement</span>
+            </a>
+            <a
+              href="https://www.epi.org/blog/gender-pay-gap-2024/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>EPI: Gender pay gap 2024</span>
+            </a>
+            <a
+              href="https://www.pewresearch.org/short-reads/2025/03/04/gender-pay-gap-in-us-has-narrowed-slightly-over-2-decades/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>Pew Research: Gender pay gap narrowed slightly</span>
+            </a>
+            <a
+              href="https://www.reddit.com/r/Economics/comments/1pa5syw/mit_report_ai_can_already_replace_nearly_12_of/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>MIT Report: AI can replace nearly 12% of jobs</span>
+            </a>
+            <a
+              href="https://www.aauw.org/resources/news/media/press-releases/2024-gender-pay-gap-data/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 hover:underline flex items-start"
+            >
+              <span className="mr-2">•</span>
+              <span>AAUW: 2024 gender pay gap data</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
