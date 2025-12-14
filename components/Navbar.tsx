@@ -49,6 +49,12 @@ export default function Navbar() {
                 Resources
               </a>
               <a
+                href="#quiz"
+                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
+              >
+                Quiz
+              </a>
+              <a
                 href="#team"
                 className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
               >
