@@ -61,6 +61,12 @@ export default function Navbar() {
                 Circular Model
               </a>
               <a
+                href="#blog"
+                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
+              >
+                Blog
+              </a>
+              <a
                 href="#team"
                 className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
               >
