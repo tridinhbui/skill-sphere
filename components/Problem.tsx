@@ -31,38 +31,57 @@ export default function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            The Challenge We're Addressing
+    <section id="problem" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgb(14, 165, 233) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">
+            Challenges
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+              The Challenge We&apos;re Addressing
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Today's students and graduates face unprecedented challenges in
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Today&apos;s students and graduates face unprecedented challenges in
             entering the workforce
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+              className="group bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary-200 relative overflow-hidden"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="text-5xl flex-shrink-0">{problem.icon}</div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {problem.title}
-                  </h3>
-                  <p className="text-sm text-primary-600 font-semibold mb-3">
-                    {problem.stats}
-                  </p>
+              {/* Gradient accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500"></div>
+              <div className="relative z-10">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="text-5xl flex-shrink-0 transform group-hover:scale-110 transition-transform duration-300">
+                    {problem.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                      {problem.title}
+                    </h3>
+                    <div className="inline-block px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-semibold mb-3">
+                      {problem.stats}
+                    </div>
+                  </div>
                 </div>
+                <p className="text-gray-700 leading-relaxed text-base">
+                  {problem.description}
+                </p>
               </div>
-              <p className="text-gray-700 leading-relaxed">
-                {problem.description}
-              </p>
             </div>
           ))}
         </div>

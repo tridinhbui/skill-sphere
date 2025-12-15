@@ -27,25 +27,34 @@ export default function Impact() {
   ];
 
   return (
-    <section id="impact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Expected Impact
+    <section id="impact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">
+            Impact
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Expected Impact
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             The positive changes we anticipate as a result of SkillSphere
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {expectedResults.map((result, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+              className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary-200 relative overflow-hidden"
             >
-              <div className="text-5xl mb-4">{result.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              {/* Gradient accent bar */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              <div className="text-5xl mb-5 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                {result.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
                 {result.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
