@@ -70,23 +70,28 @@ export default function Solution() {
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary-200 relative overflow-hidden"
+              className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary-200 relative overflow-hidden animate-fade-in-scale hover-shimmer"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-purple-50/0 group-hover:from-primary-50/100 group-hover:to-purple-50/100 transition-all duration-500 -z-0"></div>
+              {/* Animated gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 via-purple-50/0 to-pink-50/0 group-hover:from-primary-50/100 group-hover:via-purple-50/100 group-hover:to-pink-50/100 transition-all duration-700 -z-0"></div>
+              
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary-200/0 to-purple-200/0 group-hover:from-primary-200/30 group-hover:to-purple-200/30 rounded-bl-full transition-all duration-500"></div>
+              
               <div className="relative z-10">
-                <div className="text-5xl mb-5 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="text-5xl mb-5 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
                   {solution.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
                   {solution.title}
                 </h3>
                 <div className="mb-4">
-                  <span className="inline-block bg-gradient-to-r from-primary-600 to-purple-600 text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-md">
+                  <span className="inline-block bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 text-white text-xs px-4 py-1.5 rounded-full font-semibold shadow-md animate-gradient bg-[length:200%_200%] group-hover:shadow-lg group-hover:scale-105 transition-all duration-300">
                     {solution.highlight}
                   </span>
                 </div>
-                <p className="text-gray-700 leading-relaxed flex-grow text-sm">
+                <p className="text-gray-700 leading-relaxed flex-grow text-sm group-hover:text-gray-900 transition-colors">
                   {solution.description}
                 </p>
               </div>
@@ -94,40 +99,38 @@ export default function Solution() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-12 rounded-2xl shadow-2xl">
-          <h3 className="text-3xl font-bold mb-6 text-center">
-            Our Incremental Approach
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-4xl font-bold mb-2">1</div>
-              <h4 className="text-xl font-semibold mb-2">
-                Awareness & Outreach
-              </h4>
-              <p className="text-primary-50">
-                Launch campaigns in schools, colleges, and online communities to
-                reach our pilot users.
-              </p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">2</div>
-              <h4 className="text-xl font-semibold mb-2">
-                Resource Development
-              </h4>
-              <p className="text-primary-50">
-                Curate reliable resources and build directories of
-                opportunities and mentorship networks.
-              </p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">3</div>
-              <h4 className="text-xl font-semibold mb-2">
-                User Impact Tracking
-              </h4>
-              <p className="text-primary-50">
-                Collect feedback and adjust resources based on real user
-                outcomes and experiences.
-              </p>
+        <div className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 text-white p-12 rounded-3xl shadow-2xl relative overflow-hidden animate-gradient bg-[length:200%_200%]">
+          {/* Animated background pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+              backgroundSize: '30px 30px'
+            }}></div>
+          </div>
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold mb-8 text-center animate-fade-in-up">
+              Our Incremental Approach
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[1, 2, 3].map((num, index) => (
+                <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="relative inline-block mb-4">
+                    <div className="text-5xl font-bold mb-2 animate-float">{num}</div>
+                    <div className="absolute inset-0 text-5xl font-bold opacity-20 blur-xl animate-pulse-glow">{num}</div>
+                  </div>
+                  <h4 className="text-xl font-semibold mb-3">
+                    {num === 1 && "Awareness & Outreach"}
+                    {num === 2 && "Resource Development"}
+                    {num === 3 && "User Impact Tracking"}
+                  </h4>
+                  <p className="text-white/90 leading-relaxed">
+                    {num === 1 && "Launch campaigns in schools, colleges, and online communities to reach our pilot users."}
+                    {num === 2 && "Curate reliable resources and build directories of opportunities and mentorship networks."}
+                    {num === 3 && "Collect feedback and adjust resources based on real user outcomes and experiences."}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

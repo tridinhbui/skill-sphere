@@ -97,20 +97,32 @@ export default function CircularModel() {
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Courses
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {courses.map((course, index) => (
-              <div
-                key={index}
-                className={`bg-gradient-to-r ${course.color} text-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2`}
-              >
-                <div className="text-5xl mb-4">{course.icon}</div>
-                <h4 className="text-2xl font-bold mb-4">{course.title}</h4>
-                <p className="text-white/90 leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {courses.map((course, index) => (
+            <div
+              key={index}
+              className={`group bg-gradient-to-r ${course.color} text-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 relative overflow-hidden animate-fade-in-scale hover-3d perspective-3d`}
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              {/* Animated shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              
+              {/* Floating particles */}
+              <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="absolute bottom-4 left-4 w-16 h-16 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 animation-delay-2000"></div>
+              
+              <div className="relative z-10">
+                <div className="text-5xl mb-5 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
+                  {course.icon}
+                </div>
+                <h4 className="text-2xl font-bold mb-4 group-hover:scale-105 transition-transform duration-300">{course.title}</h4>
+                <p className="text-white/95 leading-relaxed">
                   {course.description}
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
         </div>
 
         {/* For Users & Employees */}
@@ -163,23 +175,36 @@ export default function CircularModel() {
         </div>
 
         {/* Impact Section */}
-        <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 rounded-2xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-8 text-center">
-            Impact of SkillSphere
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {impacts.map((impact, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur rounded-xl p-6 hover:bg-white/20 transition-all"
-              >
-                <div className="text-4xl mb-4">{impact.icon}</div>
-                <h4 className="text-xl font-bold mb-3">{impact.title}</h4>
-                <p className="text-primary-50 leading-relaxed">
-                  {impact.description}
-                </p>
-              </div>
-            ))}
+        <div className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white relative overflow-hidden animate-gradient bg-[length:200%_200%] shadow-2xl">
+          {/* Animated background pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+              backgroundSize: '40px 40px'
+            }}></div>
+          </div>
+          
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold mb-10 text-center animate-fade-in-up">
+              Impact of SkillSphere
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {impacts.map((impact, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-500 hover:-translate-y-2 border border-white/20 hover:border-white/40 animate-scale-in hover-shimmer"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="text-4xl mb-4 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
+                    {impact.icon}
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 group-hover:scale-105 transition-transform">{impact.title}</h4>
+                  <p className="text-white/90 leading-relaxed">
+                    {impact.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

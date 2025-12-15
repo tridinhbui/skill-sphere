@@ -104,17 +104,26 @@ export default function Resources() {
           {resourceCategories.map((category, index) => (
             <div
               key={index}
-              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-gray-100 hover:border-transparent relative"
+              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-gray-100 hover:border-transparent relative animate-fade-in-scale hover-3d perspective-3d"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div
-                className={`bg-gradient-to-r ${category.color} p-8 text-white relative overflow-hidden`}
+                className={`bg-gradient-to-r ${category.color} p-8 text-white relative overflow-hidden animate-gradient bg-[length:200%_200%]`}
               >
+                {/* Animated shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all"></div>
+                
+                {/* Floating decorative circles */}
+                <div className="absolute top-4 right-4 w-16 h-16 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/10 rounded-full blur-xl group-hover:scale-150 transition-transform duration-500 animation-delay-2000"></div>
+                
                 <div className="relative z-10">
-                  <div className="text-5xl mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <div className="text-5xl mb-4 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 animate-float">
                     {category.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{category.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:scale-105 transition-transform duration-300">{category.title}</h3>
                   <p className="text-sm opacity-95 leading-relaxed">{category.description}</p>
                 </div>
               </div>
