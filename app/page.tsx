@@ -13,10 +13,12 @@ import Partners from "@/components/Partners";
 import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative">
+      <AnimatedBackground />
       <Navbar />
       <Hero />
       <Problem />

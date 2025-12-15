@@ -15,48 +15,48 @@ export default function Hero() {
               SENIOR CAPSTONE PROJECT · GLOBAL SOLUTIONS
             </p>
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-text-reveal">
             Empowering Your
             <br />
-            <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]">
               Career Journey
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
             Free resources for students and graduates worldwide to strengthen
             resumes, find internships, and increase career opportunities in an
             AI-driven world.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up stagger-2">
             <a
               href="#solution"
-              className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all hover:scale-110 shadow-lg hover:shadow-2xl animate-pulse-glow"
+              className="group relative bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all hover:scale-110 shadow-lg hover:shadow-2xl animate-pulse-glow hover-shimmer overflow-hidden"
             >
-              Explore Our Solution
+              <span className="relative z-10">Explore Our Solution</span>
             </a>
             <a
               href="#impact"
-              className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full font-semibold hover:bg-primary-50 transition-all hover:scale-105 hover-lift"
+              className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full font-semibold hover:bg-primary-50 transition-all hover:scale-105 hover-lift hover-glow"
             >
               See Our Impact
             </a>
           </div>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover-lift hover:border-primary-300 border border-transparent">
-            <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover-lift hover:border-primary-300 border border-transparent animate-scale-in stagger-3 hover-3d perspective-3d">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 animate-gradient bg-[length:200%_200%]">
               100%
             </div>
             <p className="text-gray-600">Free Resources</p>
           </div>
-          <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover-lift hover:border-primary-300 border border-transparent">
-            <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover-lift hover:border-primary-300 border border-transparent animate-scale-in stagger-4 hover-3d perspective-3d">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 animate-gradient bg-[length:200%_200%]">
               Global
             </div>
             <p className="text-gray-600">Access Worldwide</p>
           </div>
-          <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover-lift hover:border-primary-300 border border-transparent">
-            <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all hover-lift hover:border-primary-300 border border-transparent animate-scale-in stagger-5 hover-3d perspective-3d">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 animate-gradient bg-[length:200%_200%]">
               All Levels
             </div>
             <p className="text-gray-600">High School to Post-Grad</p>

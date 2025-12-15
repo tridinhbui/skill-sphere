@@ -60,10 +60,11 @@ export default function Problem() {
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary-200 relative overflow-hidden"
+              className="group bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary-200 relative overflow-hidden animate-fade-in-scale hover-shimmer"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Gradient accent */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500"></div>
+              {/* Gradient accent with animation */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative z-10">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="text-5xl flex-shrink-0 transform group-hover:scale-110 transition-transform duration-300">
