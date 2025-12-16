@@ -27,45 +27,6 @@ export default function Resources() {
       color: "from-purple-500 to-purple-600",
     },
     {
-      title: "Skill Development",
-      description:
-        "Free courses and learning paths to build in-demand skills",
-      items: [
-        "Digital marketing basics",
-        "Coding fundamentals",
-        "Data analysis tools",
-        "Communication skills",
-      ],
-      icon: "🚀",
-      color: "from-green-500 to-green-600",
-    },
-    {
-      title: "Career Path Guides",
-      description:
-        "Detailed roadmaps for various industries and career trajectories",
-      items: [
-        "Tech career paths",
-        "Business & finance routes",
-        "Creative industry guides",
-        "Healthcare careers",
-      ],
-      icon: "🗺️",
-      color: "from-orange-500 to-orange-600",
-    },
-    {
-      title: "Networking Tools",
-      description:
-        "Resources to build your professional network and personal brand",
-      items: [
-        "LinkedIn optimization",
-        "Networking event calendar",
-        "Email templates",
-        "Personal branding guide",
-      ],
-      icon: "🤝",
-      color: "from-pink-500 to-pink-600",
-    },
-    {
       title: "Industry Insights",
       description: "Latest trends and employer expectations across sectors",
       items: [
