@@ -3,7 +3,7 @@ export default function Problem() {
     {
       title: "Lack of Job Opportunities",
       description:
-        "Finding a job after graduation has become really difficult. There's a lot of competition for the few entry-level positions that are available. Because of economic uncertainty and rapid technological change, many companies have reduced hiring for beginner roles. As a result, students often face a &quot;bottleneck&quot; when starting their careers. Compared to ten years ago, fewer organizations offer paid internships or training opportunities, which leaves many students relying on unpaid work or missing out on valuable experience altogether.",
+        "Finding a job after graduation has become really difficult. There's a lot of competition for the few entry-level positions that are available. Because of economic uncertainty and rapid technological change, many companies have reduced hiring for beginner roles. As a result, students often face a \"bottleneck\" when starting their careers. Compared to ten years ago, fewer organizations offer paid internships or training opportunities, which leaves many students relying on unpaid work or missing out on valuable experience altogether.",
       icon: "🎯",
       stats: "Joblessness surges for youngest US workers as firms slow entry-level hiring",
     },
