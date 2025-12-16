@@ -217,7 +217,7 @@ export default function CareerQuiz() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
               onClick={restartQuiz}
               className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all hover:scale-105 shadow-lg"
@@ -230,6 +230,25 @@ export default function CareerQuiz() {
             >
               Explore Resources
             </a>
+          </div>
+
+          {/* Result Categories - Only shown after completing quiz */}
+          <div className="mt-8 bg-gray-100 rounded-2xl p-6 animate-fade-in-up">
+            <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">
+              Result Categories
+            </h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {resultCategories.map((category) => (
+                <div
+                  key={category.id}
+                  className={`bg-gradient-to-r ${category.color} text-white p-4 rounded-xl text-center hover:scale-105 transition-transform`}
+                >
+                  <div className="text-3xl mb-2">{category.icon}</div>
+                  <div className="text-sm font-semibold">Mostly {category.id}</div>
+                  <div className="text-xs opacity-90 mt-1">{category.title}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -293,25 +312,6 @@ export default function CareerQuiz() {
                 </button>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Quick Result Preview */}
-        <div className="mt-8 bg-gray-100 rounded-2xl p-6">
-          <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">
-            Result Categories
-          </h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {resultCategories.map((category) => (
-              <div
-                key={category.id}
-                className={`bg-gradient-to-r ${category.color} text-white p-4 rounded-xl text-center`}
-              >
-                <div className="text-3xl mb-2">{category.icon}</div>
-                <div className="text-sm font-semibold">Mostly {category.id}</div>
-                <div className="text-xs opacity-90 mt-1">{category.title}</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
