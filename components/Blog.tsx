@@ -78,6 +78,17 @@ const blogPosts: BlogPost[] = [
         "Start a side project or small venture - this shows initiative, builds practical experience, and strengthens your resume!",
         "Attend speaker events, business conferences, network with students and professionals in the field, connect with alumni in business/finance/entrepreneurship roles",
       ],
+      references: [
+        "https://www.indeed.com/career-advice/finding-a-job/business-careers",
+        "https://www.umassglobal.edu/blog-news/9-different-types-business-degrees-and-career-paths",
+        "https://orfalea.calpoly.edu/student-services/career-readiness/career-paths",
+        "https://www.wgu.edu/career-guide/business.html",
+        "https://www.bethel.edu/blog/diverse-career-paths-you-can-pursue-with-a-business-degree/",
+        "https://sbecouncil.org/about-us/facts-and-data/",
+        "https://www.kaplancollectionagency.com/business-advice/68-entrepreneurship-statistics-for-2025",
+        "https://www.bls.gov/careeroutlook/2025/article/business-career-options",
+        "https://summer.harvard.edu/blog/summer-business-programs-for-high-school/",
+      ],
     },
   },
   {
