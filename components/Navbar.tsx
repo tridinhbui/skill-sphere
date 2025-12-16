@@ -49,22 +49,16 @@ export default function Navbar() {
                 Resources
               </a>
               <a
-                href="#quiz"
-                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
-              >
-                Quiz
-              </a>
-              <a
-                href="#circular-model"
-                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
-              >
-                Circular Model
-              </a>
-              <a
                 href="#blog"
                 className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
               >
                 Blog
+              </a>
+              <a
+                href="#quiz"
+                className="text-gray-700 hover:text-primary-600 transition-colors px-3 py-2 text-sm font-medium"
+              >
+                Quiz
               </a>
               <a
                 href="#contact"
