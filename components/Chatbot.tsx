@@ -67,7 +67,48 @@ export default function Chatbot() {
   };
 
   const handleQuickReply = (reply: string) => {
-    setInput(reply);
+    // Auto-send the quick reply as a message
+    const userMessage = { type: "user" as const, text: reply };
+    setMessages((prev) => [...prev, userMessage]);
+
+    // Simulate bot response
+    setTimeout(() => {
+      let botResponse = "";
+      const lowerInput = reply.toLowerCase();
+
+      if (
+        lowerInput.includes("who") ||
+        lowerInput.includes("designed for") ||
+        lowerInput.includes("target") ||
+        lowerInput.includes("audience")
+      ) {
+        botResponse =
+          "SkillSphere is designed for high school students, college students, and early-career individuals who are exploring career options or preparing for the workforce. Our platform is especially helpful for people who feel uncertain about career paths or are concerned about how AI and automation are changing job opportunities.";
+      } else if (
+        lowerInput.includes("why") ||
+        lowerInput.includes("three") ||
+        lowerInput.includes("career path") ||
+        lowerInput.includes("finance") ||
+        lowerInput.includes("healthcare") ||
+        lowerInput.includes("tech")
+      ) {
+        botResponse =
+          "We chose Finance, Healthcare, and Technology because they represent three major, fast-growing industries that are significantly impacted by AI. These fields also showcase a wide range of skill types such as analytical, interpersonal, and technical which helps users understand how different strengths align with different careers. As SkillSphere grows, we plan to expand and include more industries and career paths.";
+      } else if (
+        lowerInput.includes("how") ||
+        lowerInput.includes("help") ||
+        lowerInput.includes("prepare") ||
+        lowerInput.includes("future career")
+      ) {
+        botResponse =
+          "SkillSphere provides free and accessible resources such as career insights, skill-building guidance, and real-world examples like \"day in the life\" posts. Our goal is to help users identify their strengths, understand workplace expectations, and develop relevant skills so they feel more confident and prepared for future careers—especially in an AI-driven job market.";
+      } else {
+        botResponse =
+          "I can help answer questions about who SkillSphere is designed for, why we feature specific career paths, or how we help prepare you for your future career. Feel free to ask one of these questions or use the quick questions below!";
+      }
+
+      setMessages((prev) => [...prev, { type: "bot", text: botResponse }]);
+    }, 500);
   };
 
   return (
@@ -142,16 +183,16 @@ export default function Chatbot() {
             ))}
           </div>
 
-          {/* Quick Replies */}
-          {messages.length === 1 && (
-            <div className="px-4 pb-2">
+          {/* Quick Replies - Show after bot messages */}
+          {messages.length > 0 && messages[messages.length - 1].type === "bot" && (
+            <div className="px-4 pb-2 animate-fade-in-up">
               <p className="text-xs text-gray-500 mb-2">Quick questions:</p>
               <div className="flex flex-wrap gap-2">
                 {quickReplies.map((reply, idx) => (
                   <button
                     key={idx}
                     onClick={() => handleQuickReply(reply)}
-                    className="text-xs bg-primary-50 text-primary-600 px-3 py-1 rounded-full hover:bg-primary-100 transition-colors"
+                    className="text-xs bg-primary-50 text-primary-600 px-3 py-1.5 rounded-full hover:bg-primary-100 hover:scale-105 transition-all font-medium"
                   >
                     {reply}
                   </button>
