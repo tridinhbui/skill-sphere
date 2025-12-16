@@ -8,7 +8,6 @@ import Blog from "@/components/Blog";
 import CareerQuiz from "@/components/CareerQuiz";
 import Impact from "@/components/Impact";
 import Team from "@/components/Team";
-import Partners from "@/components/Partners";
 import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
 import Footer from "@/components/Footer";
@@ -28,7 +27,6 @@ export default function Home() {
       <CareerQuiz />
       <Impact />
       <Team />
-      <Partners />
       <Contact />
       <Chatbot />
       <Footer />
