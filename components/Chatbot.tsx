@@ -13,10 +13,9 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
 
   const quickReplies = [
-    "Tell me about free resources",
-    "How do I find internships?",
-    "Connect with a mentor",
-    "Career guidance",
+    "Who is SkillSphere designed for?",
+    "Why does SkillSphere only feature three career paths?",
+    "How does SkillSphere help me prepare for my future career?",
   ];
 
   const handleSend = () => {
@@ -30,27 +29,35 @@ export default function Chatbot() {
       let botResponse = "";
       const lowerInput = input.toLowerCase();
 
-      if (lowerInput.includes("resource") || lowerInput.includes("resume")) {
-        botResponse =
-          "SkillSphere offers free resume templates, interview prep guides, and skill-building resources. Check out our Resources section below!";
-      } else if (
-        lowerInput.includes("internship") ||
-        lowerInput.includes("job")
+      if (
+        lowerInput.includes("who") ||
+        lowerInput.includes("designed for") ||
+        lowerInput.includes("target") ||
+        lowerInput.includes("audience")
       ) {
         botResponse =
-          "We have a curated directory of internships and entry-level opportunities. Our platform connects you with real-world experience opportunities!";
+          "SkillSphere is designed for high school students, college students, and early-career individuals who are exploring career options or preparing for the workforce. Our platform is especially helpful for people who feel uncertain about career paths or are concerned about how AI and automation are changing job opportunities.";
       } else if (
-        lowerInput.includes("mentor") ||
-        lowerInput.includes("guidance")
+        lowerInput.includes("why") ||
+        lowerInput.includes("three") ||
+        lowerInput.includes("career path") ||
+        lowerInput.includes("finance") ||
+        lowerInput.includes("healthcare") ||
+        lowerInput.includes("tech")
       ) {
         botResponse =
-          "Our mentorship network connects you with experienced professionals who can guide your career journey. Would you like to learn more?";
-      } else if (lowerInput.includes("ai")) {
+          "We chose Finance, Healthcare, and Technology because they represent three major, fast-growing industries that are significantly impacted by AI. These fields also showcase a wide range of skill types such as analytical, interpersonal, and technical which helps users understand how different strengths align with different careers. As SkillSphere grows, we plan to expand and include more industries and career paths.";
+      } else if (
+        lowerInput.includes("how") ||
+        lowerInput.includes("help") ||
+        lowerInput.includes("prepare") ||
+        lowerInput.includes("future career")
+      ) {
         botResponse =
-          "We help you learn to use AI as a support tool rather than viewing it as a threat. Our resources teach you how to leverage AI in your career!";
+          "SkillSphere provides free and accessible resources such as career insights, skill-building guidance, and real-world examples like \"day in the life\" posts. Our goal is to help users identify their strengths, understand workplace expectations, and develop relevant skills so they feel more confident and prepared for future careers—especially in an AI-driven job market.";
       } else {
         botResponse =
-          "Thanks for your question! SkillSphere provides free career resources, internship directories, mentorship networks, and career guidance. What specific area are you interested in?";
+          "I can help answer questions about who SkillSphere is designed for, why we feature specific career paths, or how we help prepare you for your future career. Feel free to ask one of these questions or use the quick questions below!";
       }
 
       setMessages((prev) => [...prev, { type: "bot", text: botResponse }]);
@@ -109,7 +116,7 @@ export default function Chatbot() {
           <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4">
             <h3 className="font-bold text-lg">SkillSphere Assistant</h3>
             <p className="text-sm text-primary-100">
-              Ask me about resources, internships, or mentorship!
+              Ask me about SkillSphere and how we can help you!
             </p>
           </div>
 
