@@ -88,50 +88,6 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
-
-        <div className="bg-gradient-to-br from-primary-50 via-purple-50 to-pink-50 rounded-3xl p-8 md:p-12 relative overflow-hidden border border-primary-100 shadow-xl">
-          {/* Animated background pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 3px 3px, rgb(14, 165, 233) 1px, transparent 0)`,
-              backgroundSize: '50px 50px'
-            }}></div>
-          </div>
-          
-          <div className="relative z-10">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1 animate-slide-in-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-gray-900 to-primary-600 bg-clip-text text-transparent">
-                  Join Thousands of Students Already Using SkillSphere
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  From high school to post-grad, students worldwide are using our
-                  platform to launch their careers with confidence.
-                </p>
-                <div className="flex items-center gap-8">
-                  {[
-                    { value: "10K+", label: "Active Users" },
-                    { value: "500+", label: "Mentors" },
-                    { value: "1000+", label: "Opportunities" }
-                  ].map((stat, index) => (
-                    <div key={index} className="animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                      <div className="text-3xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex-shrink-0 animate-slide-in-right">
-                <button className="group relative bg-gradient-to-r from-primary-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all hover:scale-110 shadow-lg hover:shadow-2xl overflow-hidden hover-shimmer">
-                  <span className="relative z-10">Get Started Free</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
