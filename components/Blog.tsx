@@ -434,6 +434,41 @@ const nguyenNhatPost = {
   },
 };
 
+const nhuQuynhPost = {
+  id: "nhu-quynh-mckinsey",
+  title: "Entering Consulting: Nhu Quynh's Experience from Kelley to McKinsey",
+  subtitle: "from Nhu Quynh",
+  category: "Student Stories",
+  icon: "💼",
+  color: "from-amber-500 to-amber-600",
+  content: {
+    introduction:
+      "The path to consulting requires strong analytical skills, clear communication, and the ability to solve complex business problems. For Nhu Quynh, a student at Indiana University Kelley School of Business, this journey began with exploring different business career paths and culminated in securing a Business Analyst Intern position at McKinsey. In this post, Quynh shares her experience choosing Kelley, how her first professional exposure clarified her career direction, and advice for students interested in consulting.",
+    sections: [
+      {
+        title: "Choosing Indiana University Kelley?",
+        content:
+          "Quynh chose Indiana University Kelley School of Business because of its strong emphasis on analytical training and experiential learning. At the time of applying to university, she was interested in business but unsure which specific career path to pursue. Kelley offered a balanced curriculum that combined quantitative coursework with teamwork based projects, allowing her to explore multiple interests before making a long term decision. During her early semesters, Quỳnh focused on building a solid foundation in accounting, statistics, and business analytics. These courses helped her understand how data driven decisions shape organizational outcomes and sparked her interest in solving complex business problems.",
+      },
+      {
+        title: "First Professional Exposure and Career Clarity",
+        content:
+          "Quynh's first professional experience was an internship in a corporate strategy team at a regional company in Ho Chi Minh City, Vietnam. In this role, she supported market research and competitive analysis for expansion initiatives. While the experience strengthened her analytical skills, it also highlighted her desire to work on diverse problems across industries. This realization encouraged her to explore management consulting more seriously. Consulting appealed to Quỳnh because it offered exposure to different business contexts and the opportunity to learn at a fast pace while working closely with decision makers.",
+      },
+      {
+        title: "Transition to McKinsey as a Business Analyst Intern",
+        content:
+          "After completing the recruitment process, Quynh joined McKinsey as a Business Analyst Intern. The transition from university to a high intensity consulting environment was challenging. The pace of work was fast, and expectations were consistently high. However, her training at Indiana University Kelley prepared her well. She was able to break down ambiguous problems, collaborate effectively with diverse teams, and continuously refine her thinking through feedback. Each project strengthened her confidence and reinforced her interest in consulting.",
+      },
+      {
+        title: "Advice for Students",
+        content:
+          "Quynh advises students to build strong analytical skills, including problem solving, quantitative thinking, and data analysis. She emphasizes the importance of clear and structured communication, especially giving direct answers and presenting ideas concisely. Students should practice organizing their thoughts logically in both writing and speaking. She also encourages students to actively use school resources such as career services, alumni networks, and student organizations to strengthen their resumes.",
+      },
+    ],
+  },
+};
+
 const helpfulResources = [
   {
     title: "Indeed (YouTube Channel)",
@@ -542,6 +577,38 @@ export default function Blog() {
 
                 <div className="space-y-6">
                   {nguyenNhatPost.content.sections.map((section, index) => (
+                    <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
+                      <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
+                      <p className="leading-relaxed opacity-95">{section.content}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Nhu Quynh Story */}
+            <div
+              className={`bg-gradient-to-r ${nhuQuynhPost.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
+            >
+              <div className="p-8 md:p-12">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-5xl">{nhuQuynhPost.icon}</span>
+                  <div>
+                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
+                      {nhuQuynhPost.category}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-2">
+                  {nhuQuynhPost.title}
+                </h3>
+                <p className="text-xl opacity-90 mb-6">{nhuQuynhPost.subtitle}</p>
+                <p className="text-lg leading-relaxed mb-8 opacity-95">
+                  {nhuQuynhPost.content.introduction}
+                </p>
+
+                <div className="space-y-6">
+                  {nhuQuynhPost.content.sections.map((section, index) => (
                     <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
                       <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
                       <p className="leading-relaxed opacity-95">{section.content}</p>
