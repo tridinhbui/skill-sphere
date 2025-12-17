@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface BlogPost {
   id: string;
@@ -498,10 +498,58 @@ const helpfulResources = [
 
 export default function Blog() {
   const [expandedPost, setExpandedPost] = useState<string | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const studentStories = [haNguyenPost, nguyenNhatPost, nhuQuynhPost];
 
   const togglePost = (id: string) => {
     setExpandedPost(expandedPost === id ? null : id);
   };
+
+  const scrollToSlide = (index: number) => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const slideWidth = container.offsetWidth;
+      const scrollPosition = index * slideWidth;
+      
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: "smooth",
+      });
+      setCurrentSlide(index);
+    }
+  };
+
+  const nextSlide = () => {
+    const next = (currentSlide + 1) % studentStories.length;
+    scrollToSlide(next);
+  };
+
+  const prevSlide = () => {
+    const prev = (currentSlide - 1 + studentStories.length) % studentStories.length;
+    scrollToSlide(prev);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const container = scrollContainerRef.current;
+        const slideWidth = container.offsetWidth;
+        const scrollLeft = container.scrollLeft;
+        const newSlide = Math.round(scrollLeft / slideWidth);
+        
+        if (newSlide >= 0 && newSlide < studentStories.length) {
+          setCurrentSlide(newSlide);
+        }
+      }
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+      return () => container.removeEventListener("scroll", handleScroll);
+    }
+  }, [studentStories.length]);
 
   return (
     <section id="blog" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
@@ -516,106 +564,92 @@ export default function Blog() {
           </p>
         </div>
 
-        {/* Student Stories */}
+        {/* Student Stories Slideshow */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Student Stories
           </h3>
-          <div className="space-y-12">
-            {/* Ha Nguyen Story */}
-            <div
-              className={`bg-gradient-to-r ${haNguyenPost.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
+          
+          {/* Slideshow Container */}
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all hover:scale-110 hidden md:flex items-center justify-center"
+              aria-label="Previous slide"
             >
-              <div className="p-8 md:p-12">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-5xl">{haNguyenPost.icon}</span>
-                  <div>
-                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
-                      {haNguyenPost.category}
-                    </span>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all hover:scale-110 hidden md:flex items-center justify-center"
+              aria-label="Next slide"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Scrollable Container */}
+            <div
+              ref={scrollContainerRef}
+              className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth gap-6 pb-4 touch-pan-x"
+            >
+              {studentStories.map((story, index) => (
+                <div
+                  key={story.id}
+                  className="flex-shrink-0 w-full snap-center px-2"
+                >
+                  <div
+                    className={`bg-gradient-to-r ${story.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
+                  >
+                    <div className="p-8 md:p-12">
+                      <div className="flex items-center gap-4 mb-4">
+                        <span className="text-5xl">{story.icon}</span>
+                        <div>
+                          <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
+                            {story.category}
+                          </span>
+                        </div>
+                      </div>
+                      <h3 className="text-3xl md:text-4xl font-bold mb-2">
+                        {story.title}
+                      </h3>
+                      <p className="text-xl opacity-90 mb-6">{story.subtitle}</p>
+                      <p className="text-lg leading-relaxed mb-8 opacity-95">
+                        {story.content.introduction}
+                      </p>
+
+                      <div className="space-y-6">
+                        {story.content.sections.map((section, sectionIndex) => (
+                          <div key={sectionIndex} className="bg-white/10 backdrop-blur rounded-xl p-6">
+                            <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
+                            <p className="leading-relaxed opacity-95">{section.content}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-2">
-                  {haNguyenPost.title}
-                </h3>
-                <p className="text-xl opacity-90 mb-6">{haNguyenPost.subtitle}</p>
-                <p className="text-lg leading-relaxed mb-8 opacity-95">
-                  {haNguyenPost.content.introduction}
-                </p>
-
-                <div className="space-y-6">
-                  {haNguyenPost.content.sections.map((section, index) => (
-                    <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
-                      <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
-                      <p className="leading-relaxed opacity-95">{section.content}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
 
-            {/* Nguyen Nhat Story */}
-            <div
-              className={`bg-gradient-to-r ${nguyenNhatPost.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
-            >
-              <div className="p-8 md:p-12">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-5xl">{nguyenNhatPost.icon}</span>
-                  <div>
-                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
-                      {nguyenNhatPost.category}
-                    </span>
-                  </div>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-2">
-                  {nguyenNhatPost.title}
-                </h3>
-                <p className="text-xl opacity-90 mb-6">{nguyenNhatPost.subtitle}</p>
-                <p className="text-lg leading-relaxed mb-8 opacity-95">
-                  {nguyenNhatPost.content.introduction}
-                </p>
-
-                <div className="space-y-6">
-                  {nguyenNhatPost.content.sections.map((section, index) => (
-                    <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
-                      <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
-                      <p className="leading-relaxed opacity-95">{section.content}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Nhu Quynh Story */}
-            <div
-              className={`bg-gradient-to-r ${nhuQuynhPost.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
-            >
-              <div className="p-8 md:p-12">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-5xl">{nhuQuynhPost.icon}</span>
-                  <div>
-                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
-                      {nhuQuynhPost.category}
-                    </span>
-                  </div>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-2">
-                  {nhuQuynhPost.title}
-                </h3>
-                <p className="text-xl opacity-90 mb-6">{nhuQuynhPost.subtitle}</p>
-                <p className="text-lg leading-relaxed mb-8 opacity-95">
-                  {nhuQuynhPost.content.introduction}
-                </p>
-
-                <div className="space-y-6">
-                  {nhuQuynhPost.content.sections.map((section, index) => (
-                    <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
-                      <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
-                      <p className="leading-relaxed opacity-95">{section.content}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* Dot Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {studentStories.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    currentSlide === index
+                      ? "bg-primary-600 w-8"
+                      : "bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
