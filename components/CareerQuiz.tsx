@@ -63,6 +63,66 @@ const questions: QuizQuestion[] = [
       { label: "D", value: "D", text: "Making a positive impact on others" },
     ],
   },
+  {
+    id: 5,
+    question: "When working on a group project, what role do you naturally take?",
+    options: [
+      { label: "A", value: "A", text: "Solving technical problems" },
+      { label: "B", value: "B", text: "Designing visuals or ideas" },
+      { label: "C", value: "C", text: "Coordinating tasks and leading discussions" },
+      { label: "D", value: "D", text: "Supporting teammates and resolving conflicts" },
+    ],
+  },
+  {
+    id: 6,
+    question: "Which school subject do you enjoy the most?",
+    options: [
+      { label: "A", value: "A", text: "Math or Computer Science" },
+      { label: "B", value: "B", text: "Art, Media, or Literature" },
+      { label: "C", value: "C", text: "Economics or Business Studies" },
+      { label: "D", value: "D", text: "Biology or Social Sciences" },
+    ],
+  },
+  {
+    id: 7,
+    question: "How do you prefer to solve problems?",
+    options: [
+      { label: "A", value: "A", text: "Using logic, data, and step-by-step analysis" },
+      { label: "B", value: "B", text: "Thinking creatively and exploring multiple ideas" },
+      { label: "C", value: "C", text: "Making plans and decisions quickly" },
+      { label: "D", value: "D", text: "Listening carefully and understanding people's needs" },
+    ],
+  },
+  {
+    id: 8,
+    question: "What kind of project excites you the most?",
+    options: [
+      { label: "A", value: "A", text: "Building an app or analyzing data" },
+      { label: "B", value: "B", text: "Creating a video, poster, or brand" },
+      { label: "C", value: "C", text: "Running a small business or event" },
+      { label: "D", value: "D", text: "Organizing a community service project" },
+    ],
+  },
+  {
+    id: 9,
+    question: "What do you value most in a future career?",
+    options: [
+      { label: "A", value: "A", text: "Innovation and technical growth" },
+      { label: "B", value: "B", text: "Self-expression and creativity" },
+      { label: "C", value: "C", text: "Leadership opportunities and success" },
+      { label: "D", value: "D", text: "Meaningful impact and helping others" },
+    ],
+  },
+  {
+    id: 10,
+    question: "How do you define success?",
+    options: [
+      { label: "A", value: "A", text: "Solving complex problems effectively" },
+      { label: "B", value: "B", text: "Creating something unique and meaningful" },
+      { label: "C", value: "C", text: "Achieving goals and inspiring others" },
+      { label: "D", value: "D", text: "Improving people's lives" },
+    ],
+  },
 ];
 
 const resultCategories: ResultCategory[] = [
