@@ -119,12 +119,14 @@ export default function Resources() {
             fees. Just pure career support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg">
-              Browse All Resources
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all">
+            <a
+              href="https://drive.google.com/drive/folders/1_O0Do9G7_gJ182V9lhxUYk4EsYr_5L5x?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all hover:scale-105 text-center"
+            >
               Download Resource Pack
-            </button>
+            </a>
           </div>
         </div>
       </div>

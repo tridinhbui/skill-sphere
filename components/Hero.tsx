@@ -59,7 +59,7 @@ export default function Hero() {
             <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 animate-gradient bg-[length:200%_200%]">
               All Levels
             </div>
-            <p className="text-gray-600">High School to Post-Grad</p>
+            <p className="text-gray-600">Support transition from High School to Undergraduate level</p>
           </div>
         </div>
       </div>
