@@ -394,6 +394,46 @@ const haNguyenPost = {
   },
 };
 
+const nguyenNhatPost = {
+  id: "nguyen-nhat-ucl",
+  title: "Shaping Future in Healthcare: An Academic Journey to UCL MPharm",
+  subtitle: "from Nguyen Nhat",
+  category: "Student Stories",
+  icon: "💊",
+  color: "from-emerald-500 to-emerald-600",
+  content: {
+    introduction:
+      "The journey to choosing a career path in healthcare requires careful consideration, self-reflection, and real-world experience. For Nguyen Nhat, the decision to pursue the MPharm program at University College London (UCL) came after thoughtful evaluation of different healthcare pathways and hands-on experience in various pharmacy settings. In this post, Nguyen Nhat shares insights about the UK university application process, the importance of early preparation, and how internship experiences helped shape a clear career direction in hospital pharmacy.",
+    sections: [
+      {
+        title: "Academic Journey and UK University Direction",
+        content:
+          "The MPharm program was the most suitable choice for me at this stage of my academic journey. Pursuing Medicine requires a very long training period and creates significant financial pressure. In contrast, the MPharm program provides a professional and accredited qualification while still allowing me to work in the healthcare field and later explore other career paths aligned with my interests. Among the five universities I considered in the United Kingdom, I chose University College London for several reasons. First, location played an important role. I previously studied in Australia and realized that I do not thrive in quiet or isolated cities. London offers a dynamic environment with many academic, clinical, and professional opportunities, especially in the field of pharmacy. In addition, UCL has a strong academic reputation and global recognition, particularly in healthcare and pharmaceutical sciences. UCL is widely regarded as one of the top universities in the United Kingdom, alongside Oxford, Cambridge, Imperial College London, and the London School of Economics. Compared to other options, UCL provides broader exposure to hospitals, research institutions, and professional networks relevant to pharmacy.",
+      },
+      {
+        title: "Preparing for a UK University Application",
+        content:
+          "I believe that starting the application process as early as possible is essential. I was fortunate to have been involved in a wide range of activities from an early stage and to be genuinely passionate about what I did. This helped me understand both my personal strengths and what universities such as UCL look for in applicants. When writing my personal statement, I was very selective about what to include and what to leave out. Authenticity and consistency between academic interests, extracurricular activities, and future goals are extremely important. I also received support from Crimson, particularly through mock interviews and preparation for admission tests and interview formats commonly used for medical and healthcare-related programs in the United Kingdom, such as the UCAT and Multiple Mini Interviews. From this experience, I learned that honesty is crucial when applying to medical and healthcare programs. If you do not know the answer to an interview question, it is better to acknowledge that and demonstrate a growth mindset and willingness to learn, rather than attempting to give an uncertain response.",
+      },
+      {
+        title: "Internship Experience and How It Shaped My Career Decision",
+        content:
+          "Throughout my exploration of pharmacy, I gained experience in several settings, including hospital pharmacy, research laboratories, and community pharmacies. At the beginning, I was unsure which pathway suited me best, so I decided to experience all three. At FV Hospital in Vietnam, I worked in the hospital pharmacy, including both dispensing and research-related tasks. Later, I worked at Essentials London Pharmacy and Clinic, a community pharmacy in the United Kingdom. Through these experiences, I realized that hospital pharmacy was the environment I enjoyed the most, while laboratory research was the least suitable for me due to its restrictive structure and high-pressure nature. At FV Hospital's central pharmacy, I was responsible for preparing medications for inpatients, including critically ill patients, post-surgical patients, and new mothers after childbirth. Each day, pharmacists processed approximately 600 inpatient prescriptions. The workflow required one person to prepare the medication and another to double-check it to ensure patient safety. In addition, pharmacists provided medication counseling to help patients understand the purpose and correct use of their medications. This direct and meaningful impact on patient care helped me clearly define my career direction.",
+      },
+      {
+        title: "Key Skills for First-Year University Students",
+        content:
+          "One of the most important lessons I learned is the value of flexibility. What we believe is correct may be valid in one environment, but when entering a new academic or cultural setting, especially an international one, it is essential to remain open-minded. Recognizing early when something does not suit you allows you to explore new opportunities more effectively. Some opportunities are easier to access at earlier stages, so preparing your mindset in advance and being willing to adapt before it is too late is extremely important.",
+      },
+      {
+        title: "Advice for Students",
+        content:
+          "In my view, students need to understand how systems operate and the mechanisms behind them. Completely replicating another person's path is difficult, but students can learn from the mistakes of those who struggled and avoid repeating them. At the same time, learning from the strengths of successful individuals can help students navigate the system more effectively. This understanding not only helps students survive within the system but also enables them to grow into leaders within it.",
+      },
+    ],
+  },
+};
+
 const helpfulResources = [
   {
     title: "Indeed (YouTube Channel)",
@@ -441,34 +481,74 @@ export default function Blog() {
           </p>
         </div>
 
-        {/* Ha Nguyen Story */}
-        <div
-          className={`bg-gradient-to-r ${haNguyenPost.color} text-white rounded-2xl shadow-2xl mb-12 overflow-hidden`}
-        >
-          <div className="p-8 md:p-12">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="text-5xl">{haNguyenPost.icon}</span>
-              <div>
-                <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
-                  {haNguyenPost.category}
-                </span>
+        {/* Student Stories */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Student Stories
+          </h3>
+          <div className="space-y-12">
+            {/* Ha Nguyen Story */}
+            <div
+              className={`bg-gradient-to-r ${haNguyenPost.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
+            >
+              <div className="p-8 md:p-12">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-5xl">{haNguyenPost.icon}</span>
+                  <div>
+                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
+                      {haNguyenPost.category}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-2">
+                  {haNguyenPost.title}
+                </h3>
+                <p className="text-xl opacity-90 mb-6">{haNguyenPost.subtitle}</p>
+                <p className="text-lg leading-relaxed mb-8 opacity-95">
+                  {haNguyenPost.content.introduction}
+                </p>
+
+                <div className="space-y-6">
+                  {haNguyenPost.content.sections.map((section, index) => (
+                    <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
+                      <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
+                      <p className="leading-relaxed opacity-95">{section.content}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-2">
-              {haNguyenPost.title}
-            </h3>
-            <p className="text-xl opacity-90 mb-6">{haNguyenPost.subtitle}</p>
-            <p className="text-lg leading-relaxed mb-8 opacity-95">
-              {haNguyenPost.content.introduction}
-            </p>
 
-            <div className="space-y-6">
-              {haNguyenPost.content.sections.map((section, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
-                  <p className="leading-relaxed opacity-95">{section.content}</p>
+            {/* Nguyen Nhat Story */}
+            <div
+              className={`bg-gradient-to-r ${nguyenNhatPost.color} text-white rounded-2xl shadow-2xl overflow-hidden`}
+            >
+              <div className="p-8 md:p-12">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-5xl">{nguyenNhatPost.icon}</span>
+                  <div>
+                    <span className="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-semibold">
+                      {nguyenNhatPost.category}
+                    </span>
+                  </div>
                 </div>
-              ))}
+                <h3 className="text-3xl md:text-4xl font-bold mb-2">
+                  {nguyenNhatPost.title}
+                </h3>
+                <p className="text-xl opacity-90 mb-6">{nguyenNhatPost.subtitle}</p>
+                <p className="text-lg leading-relaxed mb-8 opacity-95">
+                  {nguyenNhatPost.content.introduction}
+                </p>
+
+                <div className="space-y-6">
+                  {nguyenNhatPost.content.sections.map((section, index) => (
+                    <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6">
+                      <h4 className="text-2xl font-bold mb-3">{section.title}</h4>
+                      <p className="leading-relaxed opacity-95">{section.content}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
