@@ -469,6 +469,131 @@ const nhuQuynhPost = {
   },
 };
 
+const khoiPost = {
+  id: "khoi-johns-hopkins",
+  title: "Khoi's Journey to Neuroscience at Johns Hopkins",
+  subtitle: "Where passion for science, opportunity, and proactive thinking meet",
+  category: "Student Stories",
+  icon: "🧠",
+  color: "from-rose-500 to-rose-600",
+  content: {
+    introduction:
+      "Khoi's journey to Neuroscience at Johns Hopkins represents a perfect blend of natural curiosity, strategic thinking, and proactive opportunity creation. From childhood fascination with the human body to choosing one of the most challenging paths in medicine, Khoi's story demonstrates how passion, preparation, and personal branding can shape an academic and professional journey.",
+    sections: [
+      {
+        title: "Why did Khoi choose Neuroscience?",
+        content:
+          "Khoi came to Neuroscience from a very natural curiosity. Since childhood, whenever he watched surgery scenes in movies, he did not feel afraid. Instead, he was fascinated by how the human body works. Among all the organs, the brain was what intrigued him the most. It does not only control movement. It also shapes emotions, perception, and our entire inner world. Later, through research, Khoi learned that neurosurgeons and cardiac surgeons face some of the most difficult challenges in medicine. Wanting to pursue the hardest path, he chose Neuroscience with the goal of becoming a neurosurgeon. For Khoi, Neuroscience is not just a field of study. It is a journey to understand how the mind and body connect. He wants to enter a discipline that is deeply scientific while still profoundly human, because studying the brain also means studying humanity itself.",
+      },
+      {
+        title: "Why did Khoi choose Johns Hopkins?",
+        content:
+          "His decision to attend Johns Hopkins came from reasons that were both practical and inspiring. Johns Hopkins is one of the world's leading research institutions, closely connected to a major hospital system and home to a long tradition in neuroscience and biomedical science. What matters most to Khoi is that international students can begin participating in research as early as freshman year without excessive barriers. This means he will not just be learning from textbooks. He will be stepping directly into the world of research, where new knowledge is created every day. Khoi does not want to simply listen to science. He wants to live in a scientific environment, enter the laboratory, work with researchers, and contribute, even in a small way, to humanity's collective knowledge. Johns Hopkins gives him the feeling that as long as he works hard, opportunities for growth will always exist.",
+      },
+      {
+        title: "What shapes the way Khoi works?",
+        content:
+          "One of the biggest influences on Khoi is his mindset of always moving toward challenges. He believes that the more difficult something is, the greater its value. When he sees someone achieve something remarkable, he does not feel discouraged. Instead, he uses it as a standard to push himself further. He also values personal branding. When someone mentions his name and trusts him with responsibility, that is not only happiness. It is motivation to do even better. With that mindset, Khoi builds projects so that when people think of them, they not only see credibility in the project, but also responsibility in the founder behind it. Khoi does not wait for opportunities to come to him. He prefers to create them by proactively learning, connecting, asking questions, and trying new things. To him, opportunity is not luck. It is the result of long-term preparation.",
+      },
+      {
+        title: "Time management, failure, and balance",
+        content:
+          "Khoi always tries to clearly categorize his work and finish tasks before the deadline to reduce stress. But no matter how prepared you are, failure is sometimes unavoidable. What matters is that he believes every failure can become a lesson, as long as you do not give up. Beyond academics, he balances his life through sports and genuine rest. To Khoi, relaxation is not avoiding responsibility. It is learning how to organize life more effectively. Khoi's time-management tips: He divides time into two types: 'events' and 'tasks.' Events have fixed start and end times, so he tracks them in Google Calendar. Tasks only have deadlines, so he manages them in TickTick, where he can organize them more clearly. Each task is divided into two deadlines: the real deadline and the personal deadline he assigns himself. For important tasks, he always finishes them three to five days early. For less urgent tasks, he finishes at least one day ahead. This way, he always stays proactive instead of being overwhelmed at the last minute.",
+      },
+      {
+        title: "How Khoi sees teamwork and leadership",
+        content:
+          "Khoi believes that a strong team is not built only on individual ability. It comes from understanding how each person works. When everyone is aligned with a shared purpose, they naturally find ways to contribute instead of waiting for instructions. To make that happen, a leader must recognize each team member's strengths and place the right person in the right role. Sometimes, he has to make difficult decisions when conflicts arise. But he trusts in transparency. If things are explained clearly, based on evidence and principles, people will understand and respect the decision. For Khoi, leadership is not just guiding others. It is being willing to take responsibility.",
+      },
+      {
+        title: "A small message",
+        content:
+          "The most valuable lesson Khoi has learned is to truly appreciate and understand the people around him. A network only has real meaning when it is built on sincerity and respect. More importantly, opportunities rarely appear by accident. They come to those who are already prepared to receive them.",
+      },
+    ],
+  },
+};
+
+const ngocHuyenPost = {
+  id: "ngoc-huyen-cambridge",
+  title: "Ngoc Huyen's Academic Journey: Mathematics at Cambridge",
+  subtitle: "from Ngoc Huyen",
+  category: "Student Stories",
+  icon: "📐",
+  color: "from-violet-500 to-violet-600",
+  content: {
+    introduction:
+      "Ngoc Huyen's journey to studying Mathematics at Cambridge represents a thoughtful approach to academic excellence, personal growth, and career clarity. From choosing her strongest subject to navigating challenges and finding balance, her story offers valuable insights for students pursuing rigorous academic paths.",
+    sections: [
+      {
+        title: "Academic Journey and Why Mathematics at Cambridge",
+        content:
+          "Ngoc Huyen began her academic journey at Phổ Thông Năng Khiếu before moving to the IB program abroad. She chose mathematics because it offers a wide range of academic and career opportunities. Cambridge became her top choice due to its global academic reputation and ranking, and because she believed she should not settle for something below her potential. Within Cambridge, she chose Trinity College not only because it is one of the largest colleges, but also because the strength of its academic community plays a major role in shaping the overall experience. Mathematics was the subject she was strongest in, and she knew that focusing on her greatest strength was the most logical decision.",
+      },
+      {
+        title: "Challenges and Personal Doubts",
+        content:
+          "There were moments when Ngoc Huyen questioned the purpose of everything she was doing. She sometimes compared herself to others and wondered why other people seemed to achieve things more easily. During those periods, she felt left out and uncertain about her own progress. To cope with this, she turned to sports and tried new activities. Starting as a beginner allowed her to clearly see improvement, which helped her shift her focus back to her own journey. Over time, she learned to feel proud of her progress instead of measuring herself against others. After her first semester at Cambridge, she also learned how to say no. She realized that saying no was not about rejecting people, but about setting boundaries with situations. Choosing not to go out in order to study, rest, or spend time alone helped her maintain balance without guilt. Understanding this distinction made it easier for her to protect her personal space and well-being.",
+      },
+      {
+        title: "An Experience That Changed Her Perspective",
+        content:
+          "One experience that deeply shaped her growth was volunteering with the UK Maths Trust. At first, she saw it as a way to give back to a community that had supported her during her own competition journey. However, through conversations with her teammates, she realized that her motivation went beyond giving back. She wanted to help build and sustain the community itself. This shift in mindset helped her step away from a purely achievement-driven environment and appreciate collaboration, shared values, and collective growth.",
+      },
+      {
+        title: "Skills and Personal Development",
+        content:
+          "Time management became one of the most important skills she developed, especially during the transition from high school to university. In high school, it was often possible to cram before exams, but university-level mathematics required deeper understanding and long-term retention. For her, learning was no longer just about achieving high scores, but about building a strong foundation and becoming a better mathematician over time. One key lesson she learned was the importance of having a long-term vision. Knowing why she was doing something helped her avoid last-minute stress and reactive decision-making. Looking back, she believes that summer should be treated as a period of freedom rather than simply a vacation. It is a valuable time to strengthen knowledge, explore interests, and prepare for future challenges.",
+      },
+      {
+        title: "AI Engineer Intern Experience and the Role of Mathematics",
+        content:
+          "As an AI Engineer Intern at Global Talent Fund, working with a Yale professor, she further understood the fundamental role of mathematics. Beyond technical knowledge, she believes that logical thinking and proactiveness are essential qualities for an engineer. Since AI is a rapidly evolving field, curiosity and flexibility are especially important. She emphasizes the need to understand how systems work rather than simply copying and pasting code. This mindset allows her to adapt, learn continuously, and grow within a complex and changing field.",
+      },
+    ],
+  },
+};
+
+const baoHanPost = {
+  id: "bao-han-uva",
+  title: "Bao Han's Journey into Finance at the University of Virginia",
+  subtitle: "from Bao Han",
+  category: "Student Stories",
+  icon: "💰",
+  color: "from-teal-500 to-teal-600",
+  content: {
+    introduction:
+      "Bao Han's journey into finance demonstrates how early curiosity, thoughtful university selection, and a people-centered approach can shape a meaningful career path. From childhood observations about financial systems to securing a Wealth Management internship at Citi Bank, her story highlights the importance of empathy and integrity in finance.",
+    sections: [
+      {
+        title: "Early Curiosity About Money and Decision-Making",
+        content:
+          "For Han, finance was not something that appeared suddenly. Growing up, she often wondered why some businesses succeeded while others failed, or why certain families seemed more financially secure. These quiet observations gradually turned into curiosity about how financial systems actually work. She realized that behind every decision, whether it was a company launch, a family investment, or a personal savings goal, there was always a financial story. By the time she reached high school, she was already gravitating toward economics, math, and problem solving subjects. But instead of seeing finance as a world of formulas and calculations, she saw it as a tool for stability, growth, and opportunity. That mindset later shaped the way she approached her college journey.",
+      },
+      {
+        title: "Why the University of Virginia and Why Finance",
+        content:
+          "When choosing a university, the University of Virginia stood out immediately. UVA offered an environment where academic rigor blended with strong community values. For Bao Han, this balance mattered. She wanted to study somewhere that challenged her intellectually while also encouraging collaboration and leadership. Finance felt like the natural pathway. She enjoyed analytical thinking, breaking complex problems into smaller pieces, and understanding how decisions affected real people. Courses like corporate finance, investments, and financial strategy helped her develop a structured, logical view of markets. Beyond the classroom, student consulting groups and finance clubs allowed her to practice research, valuation, and teamwork in real-world scenarios. Through these experiences, she learned that finance is not simply about chasing profit. It is about risk, responsibility, and long-term planning. And most importantly, it is about people.",
+      },
+      {
+        title: "Securing a Wealth Management Internship at Citi Bank",
+        content:
+          "This summer, Bao Han will be joining Citi Bank as a Wealth Management Summer Intern, a role she feels deeply aligned with. Wealth management is where technical financial knowledge meets human connection. Rather than working only behind a screen, she will engage with clients, listen to their goals, and help design long-term financial strategies. She is especially excited about learning portfolio construction, retirement planning, and client advisory skills. To her, every client represents a story. Some are building their first investment account. Others are planning for their children's education. Some are securing retirement after decades of work. Helping them navigate that journey is both a responsibility and a privilege. The internship is also an important step in exploring how ethical and sustainable financial planning can empower individuals rather than overwhelm them.",
+      },
+      {
+        title: "Challenges, Growth, and Self-Belief",
+        content:
+          "Like many students entering a competitive field, there were times when Bảo Hân doubted herself. She wondered whether she was prepared enough, whether she belonged in finance, and whether her voice mattered. Over time, she realized that confidence does not appear instantly. It grows through persistence, mentorship, and continuous learning.",
+      },
+      {
+        title: "Looking Forward: A People-Centered Finance Vision",
+        content:
+          "Looking ahead, Bảo Hân hopes to build a career that blends technical finance skills with empathy and integrity. She believes wealth management is ultimately about trust. Clients are not simply portfolios. They are families, workers, dreamers, and individuals building their futures. Her goal is to become a finance professional who helps people feel informed rather than intimidated. Someone who guides others through uncertainty with clarity and respect.",
+      },
+    ],
+  },
+};
+
 const helpfulResources = [
   {
     title: "Indeed (YouTube Channel)",
@@ -500,7 +625,7 @@ export default function Blog() {
   const [expandedPost, setExpandedPost] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const studentStories = [haNguyenPost, nguyenNhatPost, nhuQuynhPost];
+  const studentStories = [haNguyenPost, nguyenNhatPost, nhuQuynhPost, khoiPost, ngocHuyenPost, baoHanPost];
 
   const togglePost = (id: string) => {
     setExpandedPost(expandedPost === id ? null : id);
