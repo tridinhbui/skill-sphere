@@ -594,6 +594,106 @@ const baoHanPost = {
   },
 };
 
+const triBuiPost = {
+  id: "tri-bui-macalester",
+  title: "From Information and Capital to Career Purpose: The Journey of Tri Bui Through Computer Science and Economics",
+  subtitle: "from Tri Bui",
+  category: "Student Stories",
+  icon: "🚀",
+  color: "from-cyan-500 to-cyan-600",
+  content: {
+    introduction:
+      "Tri Bui's journey through Computer Science and Economics at Macalester College represents a strategic fusion of two powerful forces: information and capital. His story demonstrates how adaptability, proactive opportunity creation, and international experiences can shape a unique career path at the intersection of technology and finance.",
+    sections: [
+      {
+        title: "The Foundation: Why Computer Science and Economics?",
+        content:
+          "When asked what influenced his decision to pursue a double major in Computer Science and Economics, Tri Bui smiles and recalls a line his father once shared with him: 'The world runs on two flows: the flow of money and the flow of information.' That sentence stayed with him and quietly shaped the way he viewed the future. Economics represented the financial engine of society, while Computer Science symbolized the power of information and technology. Finance also appealed to him because he enjoys working in an industry where value creation and numbers are deeply connected to real-world outcomes. Tri's comfort with Computer Science grew naturally from his background in mathematics. Coming from a specialized math high school, he was already confident in logic, structure, and analytical thinking. To him, technology is not only the future. It is a space where creativity, innovation, and precision meet.",
+      },
+      {
+        title: "Adaptability: The Deloitte Pivot",
+        content:
+          "During sophomore year, a Software Engineering internship that Tri had secured was suddenly canceled. Instead of panicking, he pivoted quickly and landed an internship at Deloitte Vietnam. That experience cemented his belief that adaptability is one of the most critical skills anyone can develop.",
+      },
+      {
+        title: "Learning Across Borders: Macalester and NTU",
+        content:
+          "While studying at Macalester College, Tri later spent time as an exchange student at Nanyang Technological University (NTU) in Singapore. The experience challenged and shaped him in meaningful ways. With slightly more flexibility in his schedule, he even co-founded a marketing company during his exchange. But what impacted him most was the relentless drive of Asian students around him. Their discipline, consistency, and ambition reminded him that technology requires a strong foundation, especially in mathematics and physics. That mindset encouraged him to strengthen his fundamentals rather than chase surface-level trends.",
+      },
+      {
+        title: "Balancing Internships, Startups, and Academics",
+        content:
+          "Tri rarely waited for opportunities to arrive. Instead, he searched, created, and built them. He joined four different student organizations across multiple fields, exposing himself to a wide range of industries. This helped him test, refine, and slowly understand what truly fit him. He believes this experimentation period was important. It taught him independence, broadened his perspective, and allowed him to develop both technical and interpersonal skills.",
+      },
+      {
+        title: "Y Combinator: A Turning Point",
+        content:
+          "Joining the program was one of the defining milestones in Tri's journey. Surrounded by founders and innovators, he saw firsthand how deeply technology will shape the future across every industry, including finance. Even if he chose to remain in finance long-term, maintaining technological literacy would always be essential. Tri discovered that he thrives in high-energy environments where people move fast, think big, and push beyond limits. He enjoyed being part of what he calls 'hustle culture', where ambition fuels growth. The experience strengthened his belief that entrepreneurship, rather than a purely traditional corporate path, may eventually become his long-term direction.",
+      },
+      {
+        title: "What He Would Do Differently",
+        content:
+          "If he could go back to freshman year, Tri says he would take more Computer Science courses earlier so he could distribute the workload more evenly. At the same time, he appreciates that his journey turned out to be T-shaped: wide exploration with deep expertise at the intersection of fintech and marketing.",
+      },
+      {
+        title: "The International Student Challenge",
+        content:
+          "For international students, Tri believes the toughest challenge in the United States is navigating visa barriers while staying mentally resilient. Many give up at different stages. Reflection, consistency, and persistence, he says, are critical.",
+      },
+      {
+        title: "Building Real-World Advantage",
+        content:
+          "Tri believes students should go deep into technical skills. In tech that means coding. In finance that means numerical and analytical fluency. Just as important are communication skills and an open mindset. The way you speak to a finance leader is very different from how you collaborate with an engineer.",
+      },
+      {
+        title: "From Classroom Theory to Corporate Reality",
+        content:
+          "Today, as a Corporate Finance Associate at Smithfield Foods, Tri sees that academic finance often focuses on theory and models, while corporate finance requires understanding products, people, and competition. Real-world finance lives inside real-world businesses. Through every chapter, the story of Trí Bùi is about curiosity paired with action. He does not wait for opportunity. He builds it.",
+      },
+    ],
+  },
+};
+
+const vuNguyenPost = {
+  id: "vu-nguyen-amsterdam",
+  title: "Vu Nguyen's Journey into Hospitality at the University of Amsterdam",
+  subtitle: "from Vu Nguyen",
+  category: "Student Stories",
+  icon: "🏨",
+  color: "from-pink-500 to-pink-600",
+  content: {
+    introduction:
+      "Vu Nguyen's journey into Hospitality at the University of Amsterdam represents a unique path focused on human connection, cultural understanding, and creating meaningful experiences. His story demonstrates how observing small details can grow into a passion for an industry that blends art, science, and human psychology.",
+    sections: [
+      {
+        title: "A Heart for People and Experiences",
+        content:
+          "While many students choose fields like healthcare, business, and art, Vu Nguyen decided to follow a different path: Hospitality. To him, hospitality is not only about hotels or tourism. It is about creating meaningful experiences, understanding people, and recognizing how culture influences the way we treat one another. From a young age, Nguyên noticed small details around him. He paid attention to how a restaurant host greeted guests, the warmth in a barista's voice when recognizing a regular customer, and how a carefully organized event could make people feel welcomed. Over time, these observations grew into a passion. He began to see hospitality as both an art and a science of human connection.",
+      },
+      {
+        title: "Why the University of Amsterdam and Why Europe",
+        content:
+          "When it came time to choose a university, Europe felt like the right destination. The region is well known for its tourism culture, hospitality traditions, and diversity. Among the many options available, the University of Amsterdam stood out. Nguyên was drawn to the academic quality of the school, but also to the city itself. Amsterdam is a truly international place where cultures meet every day. Tourists, entrepreneurs, artists, students, and families from around the world share the same streets and canals. Studying hospitality there means observing real-life hospitality situations beyond the classroom. The program gives Nguyên a strong foundation in business, service psychology, experience design, and tourism economics. He learned that hospitality is both emotional and analytical. It requires the ability to understand people while also building systems that work efficiently.",
+      },
+      {
+        title: "From Theory to Real Practice",
+        content:
+          "Beyond lectures, Nguyên actively sought real industry experience. He worked part time in boutique hotels, helped organize events, and participated in guest experience projects. Each job taught him something unique. In hotels, he learned how many departments and staff members work together to create one smooth guest stay. In event planning, he saw how logistics and emotions must be managed at the same time. In tourism projects, he developed an understanding of how cities can design enjoyable experiences while protecting local culture and the environment. These experiences convinced him that hospitality is an excellent training ground for leadership. It requires empathy, patience, communication skills, and the ability to solve problems under pressure.",
+      },
+      {
+        title: "Challenges and Growth in Europe",
+        content:
+          "Studying and living in Europe did not always feel easy. At times Nguyên faced homesickness, cultural adjustment, and academic pressure. However, these challenges helped him grow. He learned independence, time management, and resilience. He also experienced the European working style, which values structure, teamwork, and balance. Maintaining mental well-being and a healthy routine became just as important as getting good grades.",
+      },
+      {
+        title: "A Vision for the Future",
+        content:
+          "Looking to the future, Vu Nguyen hopes to create human centered hospitality experiences. This could be through hotels, travel services, hospitality startups, or sustainable tourism models. He believes hospitality can bring people together and create moments of belonging in a world that sometimes feels disconnected.",
+      },
+    ],
+  },
+};
+
 const helpfulResources = [
   {
     title: "Indeed (YouTube Channel)",
@@ -625,7 +725,7 @@ export default function Blog() {
   const [expandedPost, setExpandedPost] = useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const studentStories = [haNguyenPost, nguyenNhatPost, nhuQuynhPost, khoiPost, ngocHuyenPost, baoHanPost];
+  const studentStories = [haNguyenPost, nguyenNhatPost, nhuQuynhPost, khoiPost, ngocHuyenPost, baoHanPost, triBuiPost, vuNguyenPost];
 
   const togglePost = (id: string) => {
     setExpandedPost(expandedPost === id ? null : id);
